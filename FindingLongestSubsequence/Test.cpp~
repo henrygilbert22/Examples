@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include "Cell.h"
+
+using namespace std
+
+int main()
+{
+
+cout<< "Kill me" <<endl;
+
+
+	return 0;
+}
