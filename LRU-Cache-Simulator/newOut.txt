@@ -1,0 +1,17 @@
+Ref     Access      Address     Tag     Index       Offset      Result      Memrefs
+----    ------     --------   -------   -----       ------      ------      -------
+1        read         b0          2          6         0          miss           1
+1        read         d0          3          2         0          miss           1
+1        read         80          2          0         0          miss           1
+1        read         18          0          3         0          miss           1
+1        read         80          2          0         0           hit             0
+1        read         90          2          2         0          miss           1
+1        read         80          2          0         0           hit             0
+1        read         80          2          0         0           hit             0
+Simulation Summary Statistics
+------------------------------
+Total hits       :3
+Total misses     :5
+Total accses     :8
+Hit ratio        :0.375
+Miss ratio       :0.625
