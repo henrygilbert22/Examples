@@ -1,0 +1,7 @@
+Reversere()
+    My worst case run time is looping through the list once. Thus my run-time complexity is O(n). 
+    This is a linear complexity and this is relfected in the linear progression of my run times. 
+
+Dedeplucate()
+    My worst case run time is looping through the list for each node in the list. Thus my run-time 
+    complexity is O(n^2). This is reflected in my in my quadratic progression of my run times. 
