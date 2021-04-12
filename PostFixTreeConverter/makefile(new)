@@ -1,0 +1,8 @@
+treeTester: treeTester.o 
+	g++ -o treeTester -std=c++11 treeTester.o 
+treeTester.o: treeTester.cpp bet.hpp 
+	g++ -c -std=c++11 treeTester.cpp
+
+clean:
+	-rm *.o
+	-rm *.h.gch
