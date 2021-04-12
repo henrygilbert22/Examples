@@ -1,0 +1,148 @@
+[yuw@linprog1 proj03src]$ ./test_stack1 
+inserting 10 elements
+Size: 10
+elements: 0 1 2 3 4 5 6 7 8 9 
+emptying the stack
+9 8 7 6 5 4 3 2 1 0 
+Size: 0
+inserting 10 elements
+0 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 9 
+unchanged stack smaller.
+Equal stacks
+Stacks are not equal
+intstk1 is less than or equal to intstk2
+0 1 2 3 4 5 6 7 8 
+[yuw@linprog1 proj03src]$ ./test_flex  testcases/test3.txt 
+Right Par: )
+Op: +
+Integer: 3
+Op: *
+left Par: (
+Integer: 1
+Op: +
+Integer: 12
+Right Par: )
+Op: -
+Integer: 7
+Integer: 12
+Op: +
+Integer: 11
+left Par: (
+Integer: 5
+Op: +
+Integer: 3
+Right Par: )
+Op: *
+Integer: 13
+Op: -
+Integer: 7
+Op: +
+[yuw@linprog1 testcases]$ in2post test0.txt
+89
+34
+a b1 c * + dd e * f + G * + 
+3 5 * c - 10 / 
+[yuw@linprog1 testcases]$ in2post test1.txt
+42.8
+-6.7
+4.9
+[yuw@linprog1 testcases]$ in2post test2.txt
+89
+Error: Operator [+] has only one operand: 89
+Found in input: 
+( 5 + 3 ) * 12 - 7 + 
+
+Number (: 11 (
+Found in input: 
+11 ( 5 + 3 ) * 12 - 7 
+
+[yuw@linprog1 testcases]$ in2post test3.txt
+Error: cannot find a matching (.
+Found in input: 
+) + 3 * ( 1 + 12 ) - 7 
+
+Number (: 11 (
+Found in input: 
+12 + 11 ( 5 + 3 ) * 13 - 7 + 
+
+[yuw@linprog1 testcases]$ in2post test4.txt
+Error: Operator [+] has only one operand: 39
+Found in input: 
++ 3 * ( 1 + 12 ) - 7 
+
+Consecutive Numbers: 3 5
+Found in input: 
+3 5 * c - 10 / 
+
+[yuw@linprog1 testcases]$ in2post test5.txt
+a3 1 12 + * 7 - 
+Consecutive Opcodes: * +
+Found in input: 
+5 + 6 - 7 * + 8 
+
+Error: cannot find a matching (.
+Found in input: 
+5 ) ( 6 - 7 
+
+[yuw@linprog1 testcases]$ in2post test6.txt
+Consecutive Numbers: 5 3
+Consecutive Opcodes: * +
+Found in input: 
+5 3 12 * + 7 - 
+
+Error: cannot find a matching (.
+Found in input: 
+( 3 + 5 ) ) 
+
+Error: failed conversion. Deck top=(
+Found in input: 
+( ( 3 + 5 ) 
+
+[yuw@linprog1 testcases]$ in2post test7.txt
+Consecutive Numbers: 3 5
+Found in input: 
+3 5 * c - 10 / 
+
+Error: Operator [+] has only one operand: 4329
+Found in input: 
++ 333 * ( 1 + 12 ) - 7 
+
+Consecutive Numbers: 3.3 52
+Found in input: 
+3.3 52 * c - 10 / 
+
+Consecutive Numbers: 3.3.5
+Consecutive Numbers: 52.a7
+Found in input: 
+3.3.5 52.a7 * c - 10 / 
+
+[yuw@linprog1 testcases]$ in2post test8.txt
+Error: cannot have an opcode or ( before ). 
+Found in input: 
+( 5 + 3 ) * ( ) + 12 - 7 
+
+Consecutive Numbers: 10 .3
+Consecutive Numbers: .3.3.5
+Consecutive Numbers: 10 a1
+Consecutive Numbers: 10.a1.5
+Found in input: 
+10 .3 + 52. * c - 10.0 * .3.3.5 / 10 a1 .5 + 10.a1.5 
+
+[yuw@linprog1 testcases]$ in2post test9.txt
+6.1
+1.8
+[yuw@linprog1 testcases]$ in2post test10.txt
+Consecutive Opcodes: - -
+Found in input: 
++ .3 - - 2 
+
+Number (: 5 (
+Found in input: 
+3 + 5 ( 2 + 3 ) 
+
+Consecutive Opcodes: * +
+Found in input: 
+* + 
+
