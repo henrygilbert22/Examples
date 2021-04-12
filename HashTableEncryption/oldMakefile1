@@ -1,0 +1,28 @@
+CC := g++
+
+CFLAGS := -std=c++11 
+
+SRCS := scrypt.cpp
+
+OBJS := ${SRCS:.cpp=.o} pass_server.o
+
+PROGS := ${SRCS:.cpp=} 
+
+.PHONY: all
+
+all: ${PROGS}
+
+scrypt: scrypt.o 
+	${CC} ${CFLAGS} $^ -o $@ -lcrypt
+
+%.o: %.cpp
+	${CC} ${CFLAGS} -c $<
+
+
+hashTester: hashTester.o 
+	g++ -o hashTester -std=c++11 hashTester.o 
+hashTester.o: hashTester.cpp hashtable.hpp 
+	g++ -c -std=c++11 hashTester.cpp
+
+clean:
+	rm -f ${PROGS} ${OBJS} *.bak *~

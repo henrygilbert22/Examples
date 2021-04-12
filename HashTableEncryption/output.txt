@@ -1,0 +1,422 @@
+[yuw@linprog1 proj05]$ make clean; make 
+rm -f userpass scrypt  userpass.o scrypt.o pass_server.o *.bak *~
+g++ -std=c++11  -c userpass.cpp
+g++ -std=c++11  -c pass_server.cpp
+g++ -std=c++11  userpass.o pass_server.o -o userpass -lcrypt
+g++ -std=c++11  -c scrypt.cpp
+g++ -std=c++11  scrypt.o pass_server.o -o scrypt -lcrypt
+[yuw@linprog1 proj05]$ ./scrypt 
+Plaintext = Rumpelstilskin
+Encrypted = $1$########$u0yA4PlGXuxAVWyV36sKa0
+[yuw@linprog1 proj05]$ ./userpass < test0.txt
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+	Invalid selection.
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+Please enter a new password: 
+	Success adding abcd
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+Please enter a new password: 
+	Success adding charles
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+Please enter a new password: 
+	Success adding frank
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a filename: 
+	Success loading file.
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+Please enter a new password: 
+	Success adding megan
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+Please enter a new password: 
+	Success adding burt
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+Please enter a new password: 
+	Success adding sandy
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+----- Beginning the dump -----
+cf65 pzGin0txp.o48Hld.gKE8.
+frank c0ywW1rO.FsCkp18y24XI.
+cb22 nbyiwncpl8dkN4sCsnX.i.
+ce54 1L7apHNQg.VzjLia7bg6j/
+cg76 JUFQldvD1qE/oFZxOecma.
+cc21 zv8HN46Tf4n0fNKh2uuU51
+sandy oF1YBkqbC7NTEXAhk0eLW.
+megan YKQLcycX64zFmkoNneToF.
+burt dKFkCEgpgAHdtD3V9OphQ.
+ci93 FOLnh049zDVy3BD0blv6X.
+charles G2fXc7JwBDOoyToJiL2UT0
+ch88 PLi89oGlLH9dDR6DvbDEW0
+cj10 2DiAGaHO.XXTasXahEybA/
+ca12 0t0dAlvTRcOjB8zJJ6rNk.
+abcd JOChpfZDz9DePzkWcuYkT0|cd33 BQV4OZVP/XvgP/LzkdcCO/
+----- End -----
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+	Failure removing morgan
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+	Success removing sandy
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+----- Beginning the dump -----
+cf65 pzGin0txp.o48Hld.gKE8.
+frank c0ywW1rO.FsCkp18y24XI.
+cb22 nbyiwncpl8dkN4sCsnX.i.
+ce54 1L7apHNQg.VzjLia7bg6j/
+cg76 JUFQldvD1qE/oFZxOecma.
+cc21 zv8HN46Tf4n0fNKh2uuU51
+megan YKQLcycX64zFmkoNneToF.
+burt dKFkCEgpgAHdtD3V9OphQ.
+ci93 FOLnh049zDVy3BD0blv6X.
+charles G2fXc7JwBDOoyToJiL2UT0
+ch88 PLi89oGlLH9dDR6DvbDEW0
+cj10 2DiAGaHO.XXTasXahEybA/
+ca12 0t0dAlvTRcOjB8zJJ6rNk.
+abcd JOChpfZDz9DePzkWcuYkT0|cd33 BQV4OZVP/XvgP/LzkdcCO/
+----- End -----
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+Please enter a new password: 
+	Success adding sandy
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+Please enter a new password: 
+	Failure adding sandy
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+Please enter the current password: 
+Please enter a new password: 
+	Failure changing sandy
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+Please enter the current password: 
+Please enter a new password: 
+	Success changing sandy
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+	Failure finding matt
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+	Success finding frank
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+	The current size is 16
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a username: 
+	Success removing frank
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+	The current size is 15
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+----- Beginning the dump -----
+cf65 pzGin0txp.o48Hld.gKE8.
+cb22 nbyiwncpl8dkN4sCsnX.i.
+ce54 1L7apHNQg.VzjLia7bg6j/
+cg76 JUFQldvD1qE/oFZxOecma.
+cc21 zv8HN46Tf4n0fNKh2uuU51
+sandy L1eLy135YkuOZxKJkgl1f1
+megan YKQLcycX64zFmkoNneToF.
+burt dKFkCEgpgAHdtD3V9OphQ.
+ci93 FOLnh049zDVy3BD0blv6X.
+charles G2fXc7JwBDOoyToJiL2UT0
+ch88 PLi89oGlLH9dDR6DvbDEW0
+cj10 2DiAGaHO.XXTasXahEybA/
+ca12 0t0dAlvTRcOjB8zJJ6rNk.
+abcd JOChpfZDz9DePzkWcuYkT0|cd33 BQV4OZVP/XvgP/LzkdcCO/
+----- End -----
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+Please enter a filename: 
+	Success writing testoutput
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice : 
+	Exiting ...
